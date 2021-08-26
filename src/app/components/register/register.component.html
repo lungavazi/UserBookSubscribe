@@ -1,0 +1,35 @@
+<div class="register-wrapper">
+    <div class="card">
+        <div class="card-body">
+            <form class="form-signin" (ngSubmit)="onSubmit(registerForm)" #registerForm="ngForm">
+                <h1 class="h3 mb-3 fw-normal">Register</h1>
+
+                <div class="form-floating">
+                    <input type="text" name="firstName" class="form-control" id="inputname" placeholder="name" required autofocus ngModel>
+                    <label for="inputname">Name</label>
+                </div>
+                <div class="form-floating">
+                    <input type="text" name="lastName" class="form-control" id="inputsurname" placeholder="surname" required ngModel>
+                    <label for="inputsurname">Surname</label>
+                </div>
+                <div class="form-floating">
+                    <input type="email" name="emailAddress" class="form-control" id="inputemail" placeholder="name@example.com" required ngModel>
+                    <label for="inputemail">Email address</label>
+                </div>
+                <div class="form-floating">
+                    <input type="password" name="password" class="form-control" id="inputpassword" placeholder="Password" required ngModel>
+                    <label for="inputpassword">Password</label>
+                </div>
+                <button class="w-100 btn btn-lg btn-primary" type="submit">Register</button>
+                <label style="align-items: center;"><a routerLink="">Sign In</a></label>
+                <div class="alert alert-danger" role="alert" *ngIf="isFormInvalid">
+                    Please fill all fields
+                </div>
+                <div class="alert alert-success" role="alert" *ngIf="isUserCreated">
+                    User created succeffully
+                </div>
+            </form>
+        </div>
+    </div>
+
+</div>

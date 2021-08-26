@@ -1,0 +1,7 @@
+{
+    "/usersubscribeApi": {
+        "target": "https://localhost:44355",
+        "secure": true,
+        "logLevel": "debug"
+    }
+}

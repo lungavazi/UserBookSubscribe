@@ -1,0 +1,13 @@
+<div class="login-wrapper">
+    <div class="row">
+        <div class="col-xs-8">
+            <ul class="list-group">
+                <li class="list-group-item" *ngFor="let book of books" (click)="onBookSelect(book)">
+                    <span>{{book.name}}</span>
+                    <button (click)="Subscribe(book.bookId)" class="btn btn-success">Subscribe</button>
+                    <button (click)="UnSubscribe(book.bookId)" class="btn btn-danger">UnSubscribe</button>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
